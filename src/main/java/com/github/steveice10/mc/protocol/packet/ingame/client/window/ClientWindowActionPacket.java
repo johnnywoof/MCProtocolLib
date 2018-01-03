@@ -111,7 +111,7 @@ public class ClientWindowActionPacket extends MinecraftPacket {
 
         out.writeByte(param);
         out.writeShort(this.actionId);
-        out.writeByte(MagicValues.value(Integer.class, this.action));
+        out.writeVarInt(MagicValues.value(Integer.class, this.action));
         NetUtil.writeItem(out, this.clicked);
     }
 }
